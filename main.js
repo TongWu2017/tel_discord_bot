@@ -5,7 +5,7 @@ const { randomHex, remove, toWk, randC, rng, autoEmbed, timeCo, guildFind, now, 
 const config = require("./config.json");
 const afk = require("./afk.json");
 const snipe = require("./snipe.json");
-const client = new Discord.Client({ intents: Object.keys(Discord.IntentsBitField.Flags), partials: ['CHANNEL'] });
+const client = new Discord.Client({ intents: Object.keys(Discord.Intents.FLAGS), partials: ['CHANNEL'] });
 //token.txt contains the token 
 config.token = fs.readFileSync("token.txt", "utf8").trim()
 client.vars = {}

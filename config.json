@@ -1,0 +1,38 @@
+{
+    "prefix": "tel",
+    "servers": {
+    },
+    "topics": [
+        "What is the most scared you've ever been?",
+        "What is the weirdest thing you've ever eaten?",
+        "What was the most memorable place you've travelled to?",
+        "What is your favourite subject at your school?",
+        "What is your favourite genre of movies/shows?",
+        "What is your biggest fear?",
+        "How much time do you spend on electronics daily?",
+        "How much time do you spend on the Internet daily?",
+        "What is your favourite type of food?",
+        "Do you think the Metric unit system is better than the Imperial unit system?",
+        "What is your favourite flavour in food? Like spicy, salty, sweet, sour, etc.",
+        "What is the meaning of life?",
+        "Do you think the world would get replaced by robots/Artificial Intelligence?",
+        "Do you believe in a higher power?",
+        "Do you prefer using discord with keyboard and mouse or touchscreen?",
+        "Do you prefer dark more or light mode?",
+        "What is one change you would like to make for your school?",
+        "What TV shows do you like to binge?",
+        "On average, how much sleep do you get daily?",
+        "What is your favourite pastime?",
+        "What is the best time you had with your family?",
+        "What is your favourite type of smart device?",
+        "What is your favourite drink?",
+        "What is the prettiest place you've been to?",
+        "What is something you've wanted to do for a long time but never had the courage to?",
+        "Have you gotten away with something that you thought was impossible to?",
+        "What is the one superpower you would pick if you could?",
+        "If you got a billion dollars today, what would you do?",
+        "Would you rather always have internet or always have electricity?"
+   ],
+    "massnick": {
+    }
+}
