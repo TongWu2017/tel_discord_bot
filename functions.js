@@ -357,11 +357,20 @@ exports.unscramble = async (word) => {
         const arr = []
         const res = await fetch(`https://www.unscramble.me/${word}`)
         const $ = cheerio.load(await res.text())
-        var s1 = cheerio.load($('div[class="grid mTop-6"]').html())('div[class="mBottom-6"]').html()
-        var s2 = cheerio.load(s1)
-        var s3 = cheerio.load(s2("tbody").html()).html()
-        s3.split("</a>").join("").split('\n').filter(item => item.includes('class="wordsTable__trigger"')).map(item => item.slice(0, item.length - 9)).forEach(item => arr.push(item.substring(item.length - word.length, item.length)))
-        if (/[^a-z]/.test(arr[0])) return false
+        const tables = $('table.wordsTable td');
+
+        // var s1 = cheerio.load($('div[class="grid mTop-6"]').html())('table[class="wordsTable"]').html()
+        // var s2 = cheerio.load(s1)
+        // console.log(s2.html())
+        // var s3 = cheerio.load(s2("tbody").html()).html()
+        // s3.split("</a>").join("").split('\n').filter(item => item.includes('class="wordsTable__trigger"')).map(item => item.slice(0, item.length - 9)).forEach(item => arr.push(item.substring(item.length - word.length, item.length)))
+        // if (/[^a-z]/.test(arr[0])) return false
+        tables.each((index, element) => {
+            const text = $(element).text();
+            if (!/[^a-z]/.test(text)) {
+                arr.push(text);
+            }
+        });
         return arr
     } catch {
         return false
